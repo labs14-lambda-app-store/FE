@@ -1,0 +1,275 @@
+/* Example
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+*/
+
+%box-shadow {
+	box-shadow: 0 0 6px 3px #f3f3f3;
+}
+
+%search-section {
+	.control-group {
+		width: 100%;
+		margin: 20px auto;
+		@include box-align(flex-start, flex-start);
+		flex-direction: column;
+
+		@media (max-width: 980px) and (min-width: 500px) {
+			flex-direction: row;
+			@include box-align();
+		}
+
+		.search-box {
+			width: 100%;
+			flex-direction: column;
+			@include box-align(flex-start, flex-start);
+			@media (max-width: 980px) and (min-width: 500px) {
+				width: 48%;
+				@include box-align(center, flex-start);
+			}
+
+			.css-pgw907-container {
+				max-width: 224px;
+				width: 100%;
+			}
+
+			label {
+				margin: 5px;
+			}
+			@media (max-width: 600px) {
+				max-width: 100%;
+				flex-direction: column;
+			}
+
+			h3 {
+				font-weight: 700;
+			}
+
+			.css-bhdpim-control {
+				border-radius: 0;
+				font-size: 1.4rem;
+				min-height: auto;
+			}
+
+			.css-gxal88-control {
+				border-radius: 0;
+				margin-bottom: 10px;
+				height: 38px;
+				min-height: 38px;
+				cursor: text;
+			}
+
+			.css-7c8269-control {
+				margin-bottom: 10px;
+				min-height: 38px;
+				box-shadow: none;
+
+				&:hover {
+					border-color: $newBorder;
+				}
+			}
+		}
+		.control {
+			font-family: arial;
+			position: relative;
+			padding-left: 26px;
+			margin-bottom: 4px;
+			padding-top: 4px;
+			cursor: pointer;
+			font-size: 15px;
+		}
+		.control input {
+			position: absolute;
+			z-index: -1;
+			opacity: 0;
+		}
+		.control_indicator {
+			position: absolute;
+			top: 2px;
+			left: 0;
+			height: 20px;
+			width: 20px;
+			background: #e6e6e6;
+			border: 0px solid #000000;
+		}
+		.control-radio .control_indicator {
+			border-radius: 0;
+		}
+
+		.control:hover input ~ .control_indicator,
+		.control input:focus ~ .control_indicator {
+			background: #cccccc;
+		}
+
+		.control input:checked ~ .control_indicator {
+			background: $lambdaTeal;
+		}
+		.control:hover input:not([disabled]):checked ~ .control_indicator,
+		.control input:checked:focus ~ .control_indicator {
+			background: $lambdaTeal;
+		}
+		.control input:disabled ~ .control_indicator {
+			background: #e6e6e6;
+			opacity: 0.6;
+			pointer-events: none;
+		}
+		.control_indicator:after {
+			box-sizing: unset;
+			content: '';
+			position: absolute;
+			display: none;
+		}
+		.control input:checked ~ .control_indicator:after {
+			display: block;
+		}
+		.control-checkbox .control_indicator:after {
+			left: 6px;
+			top: 2px;
+			width: 7px;
+			height: 13px;
+			border: solid #ffffff;
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg);
+		}
+		.control-checkbox input:disabled ~ .control_indicator:after {
+			border-color: #7b7b7b;
+		}
+
+		// Radio
+
+		.control_indicator-radio {
+			position: absolute;
+			top: 2px;
+			border-radius: 50%;
+			left: 0;
+			height: 20px;
+			width: 20px;
+			background: #e6e6e6;
+			border: 0px solid #000000;
+		}
+		.control-radio .control_indicator-radio {
+			border-radius: 0;
+		}
+
+		.control:hover input ~ .control_indicator-radio,
+		.control input:focus ~ .control_indicator-radio {
+			background: #cccccc;
+		}
+
+		.control input:checked ~ .control_indicator-radio {
+			background: $lambdaTeal;
+		}
+		.control:hover input:not([disabled]):checked ~ .control_indicator-radio,
+		.control input:checked:focus ~ .control_indicator-radio {
+			background: $lambdaTeal;
+		}
+		.control input:disabled ~ .control_indicator-radio {
+			background: #e6e6e6;
+			opacity: 0.6;
+			pointer-events: none;
+		}
+		.control_indicator-radio:after {
+			box-sizing: unset;
+			content: '';
+			position: absolute;
+			display: none;
+		}
+		.control input:checked ~ .control_indicator-radio:after {
+			display: block;
+		}
+		.control-checkbox .control_indicator-radio:after {
+			left: 6px;
+			top: 6px;
+			width: 8px;
+			height: 8px;
+			background-color: $lightcolor;
+			border: solid $lightcolor;
+			border-radius: 50%;
+		}
+		.control-checkbox input:disabled ~ .control_indicator-radio:after {
+			border-color: #7b7b7b;
+		}
+
+		.input-location {
+			input {
+				text-align: center;
+				font-size: 1.5rem;
+				max-width: 53px;
+				margin: 3px;
+				padding: 3px 4px;
+				border: 1px solid $newBorder;
+				&[type='number']::-webkit-outer-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+				&[type='number'] {
+					-moz-appearance: textfield;
+				}
+			}
+		}
+		.search-location {
+			border: 1px solid $border-color;
+			margin-top: 10px;
+			min-height: 48px;
+			max-width: 224px;
+
+			background-color: $lightcolor;
+			@include box-align(flex-start, center);
+			.fa-search {
+				color: lightgray;
+				margin: 5px 10px;
+			}
+			input {
+				font-size: 1.6rem;
+				padding: 5px;
+				border: none;
+				background-color: $lightcolor;
+				::placeholder {
+					color: lightgray;
+				}
+			}
+		}
+		hr {
+			margin: 20px auto;
+			border: none;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+			@media (max-width: 980px) and (min-width: 500px) {
+				display: none;
+			}
+		}
+	}
+	.css-1s4n2az-control {
+		border: 1px solid $newBorder;
+		margin-top: 20px;
+		margin-bottom: 25px;
+	}
+
+	.search-button {
+		width: 100%;
+		text-align: center;
+		.bnt-search {
+			border: none;
+			background-color: $lambdaTeal;
+			color: $lightcolor;
+			font-size: 1.5rem;
+			padding: 5px 10px;
+			margin: 0 auto;
+			max-width: 250px;
+			width: 100%;
+			cursor: pointer;
+			transition-duration: 0.3s;
+			&:hover {
+				background-color: $lambdaGray;
+			}
+		}
+	}
+}

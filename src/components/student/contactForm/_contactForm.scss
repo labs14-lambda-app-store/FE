@@ -1,0 +1,98 @@
+.contact-form {
+  padding: 5px;
+}
+
+.contact-btn {
+  @include box-align(flex-start, center);
+
+  margin-right: 5px;
+  padding: 20px;
+  text-decoration: none;
+  color: $lightcolor;
+  background-color: $lambdaRed;
+  cursor: pointer;
+  text-align: center;
+  transition-duration: 0.3s;
+
+  &:hover {
+    background-color: darken($lambdaRed, 10%);
+  }
+
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
+}
+
+.contact-form-header-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.contact-form-header-message {
+  font-size: 2.6rem;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.input-div {
+  width: 100%;
+}
+
+.email-label,
+.subject-label,
+.message-label {
+  width: 100%;
+
+  @media (max-width: 767px) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 375px) {
+    margin: 0 auto;
+  }
+}
+
+.email-label {
+  margin-top: 5px;
+}
+
+.email-input,
+.message-input,
+.subject-input {
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 5px 5px 5px 10px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media (max-width: 375px) {
+    width: 100%;
+  }
+}
+
+.email-input,
+.subject-input {
+  height: 4rem;
+}
+
+.message-input {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 275px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    height: 300px;
+  }
+
+  @media (max-width: 375px) {
+    width: 100%;
+    height: 300px;
+  }
+}

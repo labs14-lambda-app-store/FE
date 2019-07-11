@@ -1,0 +1,42 @@
+.skills-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 35%;
+	margin-top: 50px;
+	@media (max-width: 600px) {
+		width: 100%;
+	}
+
+	h2 {
+		font-weight: 900;
+		margin-bottom: 24px;
+		font-size: 2.2rem;
+	}
+
+	section {
+		margin-bottom: 20px;
+		line-height: 1.8;
+		color: $lambdaGray;
+
+		h3 {
+			margin-bottom: 5px;
+		}
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		.skill-chip {
+			text-transform: capitalize;
+			background: $lambdaRed;
+			cursor: default;
+			font-size: 1.6rem;
+			padding: 5px 12px;
+			color: white;
+			margin: 5px 5px;
+		}
+	}
+}

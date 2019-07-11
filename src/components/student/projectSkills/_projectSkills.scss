@@ -1,0 +1,23 @@
+.projectSkills-container {
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
+
+	section {
+		margin-bottom: 20px;
+
+		ul {
+			@include box-align();
+			max-width: 800px;
+		}
+
+		.projectSkill-chip {
+			background: $lambdaRed;
+			cursor: default;
+			font-size: 1.8rem;
+			padding: 5px 20px;
+			color: white;
+			margin: 5px 5px;
+		}
+	}
+}

@@ -1,0 +1,88 @@
+// Global scss
+
+/* Variables example
+$primary-color: #333;
+*/
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box !important;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Lato', sans-serif;
+	background-color: $backg-light;
+}
+
+li,
+input,
+label,
+textarea {
+	font-family: 'Lato', sans-serif;
+}
+
+.hrTop {
+	border: 3px solid $lambdaRed !important;
+	background-color: $lambdaRed;
+	width: 59px !important;
+	margin: 0 auto 24px 0 !important;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid rgba(0, 0, 0, 0.12);
+	width: 100%;
+}
+
+.colorTeal {
+	color: $lambdaTeal;
+}
+
+.colorGray {
+	color: $lambdaGray;
+}
+
+// buttons
+
+.sc-modal-buttons-delete {
+	@include box-align(flex-end, center);
+	button[type='submit'] {
+		font-size: 1.4rem;
+		background-color: $lambdaDarkBlue;
+		color: $lightcolor;
+		border: none;
+		border-radius: 0;
+		margin: 3px;
+		cursor: pointer;
+		&:hover {
+			background-color: darken($color: $lambdaDarkBlue, $amount: 10);
+		}
+	}
+
+	button {
+		font-size: 1.4rem;
+		background-color: $lambdaRed;
+		color: $lightcolor;
+		border: none;
+		border-radius: 0;
+		margin: 3px;
+		padding: 2px 5px;
+		cursor: pointer;
+		opacity: 0.7;
+		&:hover {
+			border: none;
+			opacity: 1;
+			background-color: darken($color: $lambdaRed, $amount: 10);
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+}
