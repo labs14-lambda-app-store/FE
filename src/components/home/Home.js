@@ -6,9 +6,9 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div className="home">
-				<div className="map-container">
+				{/* <div className="map-container">
 					<MapboxMapContainer />
-				</div>
+				</div> */}
 
 				<header>
 					<div className="header-text">
