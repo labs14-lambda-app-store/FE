@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Swiper from 'react-id-swiper/lib/ReactIdSwiper.full';
+import Swiper from 'react-id-swiper';
 import axios from 'axios';
 
 const ProjectViewHome = () => {
