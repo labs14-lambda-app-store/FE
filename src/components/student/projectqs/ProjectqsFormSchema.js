@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CreatableSelect from "react-select/lib/Creatable";
+import CreatableSelect from "react-select/creatable";
 import { ErrorMessage, Field, Form } from "formik";
 import * as Yup from "yup";
 

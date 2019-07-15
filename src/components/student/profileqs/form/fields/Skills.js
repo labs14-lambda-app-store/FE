@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import CreatableSelect from 'react-select/lib/Creatable';
+import CreatableSelect from 'react-select/creatable';
 import { ErrorMessage, Field } from 'formik';
 
 import { reactSelectStylesStretch } from '../../../../../styles/ReactSelectStyles';
