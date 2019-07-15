@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Swiper from 'react-id-swiper/lib/ReactIdSwiper.full';
+import Swiper from 'react-id-swiper/lib/';
+// import Swiper from 'react-id-swiper/lib/ReactIdSwiper.full'; previously sprung error "Cannot find module 'react-id-swiper/lib/ReactIdSwiper.full' from 'Carousel.js'"
 import axios from 'axios';
 
 const ProjectViewHome = () => {
