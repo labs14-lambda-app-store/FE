@@ -1,5 +1,7 @@
 import React from 'react';
 import AsyncSelect from 'react-select';
+// import AsyncSelect from 'react-select/lib/Async'; previously sprung error "Cannot find module 'react-select/lib/Async' from 'LocationSelect.js'"
+
 import axios from 'axios';
 
 const LocationSelect = ({
